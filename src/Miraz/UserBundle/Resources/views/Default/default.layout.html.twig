@@ -1,0 +1,69 @@
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="A test project on Symfony">
+	    <meta name="author" content="Miraz Al-Mamun">
+	    <link rel="shortcut icon" href="/favicon.ico">
+
+	    <title>{% block title %}Symfony{% endblock %}</title>
+
+		<link href="{{ asset('bundles/mirazuser/css/bootstrap.min.css') }}" rel="stylesheet"/>
+		<link href="{{ asset('bundles/mirazuser/css/bootstrap-theme.min.css') }}" rel="stylesheet"/>
+		{% block head_css %}
+			{# the header script block #}
+		{% endblock %}
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="{{ asset('bundles/mirazuser/js/bootstrap.js') }}" type="text/javascript"></script>
+
+		{% block head_js %}
+			{# the header script block #}
+		{% endblock %}
+	</head>
+
+
+	<body>
+			<!-- BEGIN: the top navigation -->
+			<div class="navbar navbar-default navbar-static-top" role="navigation">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="#">Symfony</a>
+		        </div>
+		        <div class="navbar-collapse collapse">
+		          <ul class="nav navbar-nav">
+		            <li class="active"><a href="/">Home</a></li>
+		            <li><a href="/about">About</a></li>
+		            <li><a href="/register">Register</a></li>
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </div>
+			<!-- END: the top navigation -->
+
+			<div class="container-wrapper">
+				<div class="container">
+					{% block body %}
+						{# the body block will be filled by child template #}
+					{% endblock %}
+
+					{% block footer_js %}
+						{# placeholder for footer JS #}
+					{% endblock %}
+				</div>
+			</div>
+
+		<!-- BEGIN: footer -->
+			<footer class="footer" role="contentinfo" aria-role="contentinfo">
+				<div class="text-center">A project by Miraz Al-Mamun powered by Symfony</div>
+			</footer>
+		<!-- END: footer -->
+	</body>
+</html>

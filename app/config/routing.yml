@@ -1,0 +1,4 @@
+miraz_user:
+    resource: "@MirazUserBundle/Resources/config/routing.yml"
+    prefix:   /
+

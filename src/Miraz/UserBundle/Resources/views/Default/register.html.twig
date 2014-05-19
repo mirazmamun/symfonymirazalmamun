@@ -1,0 +1,14 @@
+{% extends 'MirazUserBundle:Default:default.layout.html.twig'%}
+
+{% block head_css %}
+	<link href="{{ asset('bundles/mirazuser/css/default.index.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+	{# render the registration form #}
+	<form action="{{ path('miraz_user_register') }}" method="post" {{ form_enctype(form) }}>
+		{{ form_errors(form) }}
+		{{ form_widget(form) }}
+		{{ form_rest(form) }}
+	</form>
+{% endblock %}
