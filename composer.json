@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "mirazalmamun/symfony.mirazalmamun.com",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "The web project for testing Symfony web application for my test server",
     "autoload": {
         "psr-0": { "": "src/" }
     },
